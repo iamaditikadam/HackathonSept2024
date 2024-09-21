@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+// src/App.js
+import React from 'react';
+import NavBar from './Components/navBar.tsx'; // Import the NavBar component
+import './index.css'; // Use index.css for styling
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col min-h-screen">
+      <div className="flex-grow"></div> {/* This allows the header/content area to grow */}
+      <NavBar /> {/* Display the NavBar at the bottom */}
     </div>
   );
-}
+};
 
 export default App;
